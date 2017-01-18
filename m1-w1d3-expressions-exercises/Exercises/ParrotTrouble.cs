@@ -9,8 +9,10 @@ namespace Exercises
     public partial class Exercises
     {
         /*
-         We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. 
-         We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true if 
+         We have a loud talking parrot. 
+         The "hour" parameter is the current hour time in the range 0..23. 
+         We are in trouble if the parrot is talking and the 
+         hour is before 7 or after 20. Return true if 
          we are in trouble.
          parrotTrouble(true, 6) → true
          parrotTrouble(true, 7) → false
@@ -18,7 +20,12 @@ namespace Exercises
          */
         public bool ParrotTrouble(bool talking, int hour)
         {
-            return false;
+            bool inTrouble = false;
+            if ((talking) && ((hour<7) || (hour>20)))
+            {
+                inTrouble = true;
+            }
+            return inTrouble;
         }
 
     }

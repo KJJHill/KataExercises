@@ -9,7 +9,8 @@ namespace Exercises
     public partial class Exercises
     {
         /*
-         Given 3 int values, a b c, return their sum. However, if one of the values is the same as another 
+         Given 3 int values, a b c, return their sum. 
+         However, if one of the values is the same as another 
          of the values, it does not count towards the sum.
          loneSum(1, 2, 3) → 6
          loneSum(3, 2, 3) → 2
@@ -17,7 +18,28 @@ namespace Exercises
          */
         public int LoneSum(int a, int b, int c)
         {
-            return 0;
+            int result = 0;
+            if (a==b && a==c)
+            {
+                result = 0;
+            }
+            else if (a==b)
+            {
+                result = c;
+            }
+            else if (b==c)
+            {
+                result = a;
+            }
+            else if (a==c)
+            {
+                result = b;
+            }
+            else
+            {
+                result = a + b + c;
+            }
+            return result;
         }
 
     }

@@ -10,7 +10,8 @@ namespace Exercises
     {
 
         /*
-         Given a non-negative number "num", return true if num is within 2 of a multiple of 10. Note: (a % b) 
+         Given a non-negative number "num", 
+         return true if num is within 2 of a multiple of 10. Note: (a % b) 
          is the remainder of dividing a by b, so (7 % 5) is 2. 
          nearTen(12) → true
          nearTen(17) → false
@@ -18,7 +19,13 @@ namespace Exercises
          */
         public bool NearTen(int num)
         {
-            return false;
+            bool result = false;
+            if ((num % 10 == 1) || (num % 10 == 2) || (num % 10 == 8) || (num %10 == 9))
+            {
+                result = true;
+            }
+
+            return result;
         }
     }
 }

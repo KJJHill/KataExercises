@@ -16,7 +16,16 @@ namespace Exercises
          */
         public bool In1020(int a, int b)
         {
-            return false;
+            bool result = false;
+            if ((10 <= a) && (a <= 20))
+            {
+                result = true;
+            }
+            else if ((10 <= b) && (b <= 20))
+            {
+                result = true;
+            }
+            return result;
         }
 
     }

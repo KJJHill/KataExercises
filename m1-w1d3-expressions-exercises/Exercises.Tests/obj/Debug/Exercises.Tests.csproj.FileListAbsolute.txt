@@ -6,3 +6,11 @@ C:\Users\john\VisualStudio\m1-csharp-expressions-exercises\Exercises.Tests\bin\D
 C:\Users\john\VisualStudio\m1-csharp-expressions-exercises\Exercises.Tests\obj\Debug\Exercises.Tests.csprojResolveAssemblyReference.cache
 C:\Users\john\VisualStudio\m1-csharp-expressions-exercises\Exercises.Tests\obj\Debug\Exercises.Tests.dll
 C:\Users\john\VisualStudio\m1-csharp-expressions-exercises\Exercises.Tests\obj\Debug\Exercises.Tests.pdb
+C:\Users\khill\TechElevator\kendallenehill-c-exercises\m1-w1d3-expressions-exercises\Exercises.Tests\bin\Debug\Exercises.Tests.dll
+C:\Users\khill\TechElevator\kendallenehill-c-exercises\m1-w1d3-expressions-exercises\Exercises.Tests\bin\Debug\Exercises.Tests.pdb
+C:\Users\khill\TechElevator\kendallenehill-c-exercises\m1-w1d3-expressions-exercises\Exercises.Tests\bin\Debug\Exercises.dll
+C:\Users\khill\TechElevator\kendallenehill-c-exercises\m1-w1d3-expressions-exercises\Exercises.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\khill\TechElevator\kendallenehill-c-exercises\m1-w1d3-expressions-exercises\Exercises.Tests\bin\Debug\Exercises.pdb
+C:\Users\khill\TechElevator\kendallenehill-c-exercises\m1-w1d3-expressions-exercises\Exercises.Tests\obj\Debug\Exercises.Tests.csprojResolveAssemblyReference.cache
+C:\Users\khill\TechElevator\kendallenehill-c-exercises\m1-w1d3-expressions-exercises\Exercises.Tests\obj\Debug\Exercises.Tests.dll
+C:\Users\khill\TechElevator\kendallenehill-c-exercises\m1-w1d3-expressions-exercises\Exercises.Tests\obj\Debug\Exercises.Tests.pdb

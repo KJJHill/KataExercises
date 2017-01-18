@@ -19,7 +19,23 @@ namespace Exercises
          */
         public bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
         {
-            return false;
+            if (!isAsleep)
+            {
+                if (isMom)
+                {
+                    return true;
+                }
+                else if (isMorning)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+
+                return false;
+            }
+            return true;
         }
     }
 }
