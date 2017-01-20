@@ -24,7 +24,8 @@ namespace Exercises
             bool result = false;
 
             result = ((nums.Length > 1) && (nums[0] == nums[nums.Length-1])) ? true : false;
-
+            int myInt = ((nums.Length > 1) && (nums[0] == nums[nums.Length-1])) ? 13: 24;
+            
             return result;
         }
 
