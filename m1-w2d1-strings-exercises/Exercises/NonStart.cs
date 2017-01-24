@@ -9,7 +9,8 @@ namespace Exercises
     public partial class StringExercises
     {
         /*
-         Given 2 strings, return their concatenation, except omit the first char of each. The strings will 
+         Given 2 strings, return their concatenation, except omit the first char of each. 
+         The strings will 
          be at least length 1.
          nonStart("Hello", "There") → "ellohere"
          nonStart("java", "code") → "avaode"
@@ -17,7 +18,8 @@ namespace Exercises
          */
         public string NonStart(string a, string b)
         {
-            return null;
+            string results = a.Substring(1,a.Length-1) + b.Substring(1, b.Length - 1);
+            return results;
         }
     }
 }

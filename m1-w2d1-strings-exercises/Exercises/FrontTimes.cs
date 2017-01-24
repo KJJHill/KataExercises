@@ -17,7 +17,20 @@ namespace Exercises
          */
         public string FrontTimes(string str, int n)
         {
-            return null;
+            string results = "";
+            string frontString = "";
+
+            if (str.Length > 0)
+            {
+                frontString = (str.Length > 2) ? str.Substring(0, 3) : (str.Length == 2) ? str.Substring(0, 2) : str.Substring(0, 1);
+
+                for (int i = 0; i < n; i++)
+                {
+                    results = results + frontString;
+                }
+            }
+
+            return results;
         }
 
     }

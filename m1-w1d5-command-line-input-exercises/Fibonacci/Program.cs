@@ -11,9 +11,11 @@ namespace Fibonacci
         /*
          The Fibonacci numbers are the integers in the following sequence:  
 	        0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
-         By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number is the sum of the previous two.
+         By definition, the first two numbers in the Fibonacci sequence are 
+         0 and 1, and each subsequent number is the sum of the previous two.
  
-         Write a command line program which prompts the user for an integer value and display the Fibonacci sequence leading up to that number.
+         Write a command line program which prompts the user 
+         for an integer value and display the Fibonacci sequence leading up to that number.
   
          C:\Users> Fiboncci
          Please enter the Fibonacci number: 25
@@ -22,6 +24,26 @@ namespace Fibonacci
          */
         static void Main(string[] args)
         {
+            Console.Write("Please enter the Fibonacci number: ");
+            int fibonacciStop = int.Parse(Console.ReadLine());
+            int total = 0;
+            int firstTerm = 0;
+            int secondTerm = 1;
+
+            for (int i = 0; i <= fibonacciStop; i++)
+            {
+                if (i <= 1)
+                {
+                    Console.Write(i + ", ");
+                }
+                else
+                {
+                    total = firstTerm + secondTerm;
+                    firstTerm = secondTerm;
+                    secondTerm = total;
+                    Console.Write(total + ", ");
+                }
+            }
         }
     }
 }

@@ -27,7 +27,31 @@ namespace TempConvert
          */
         static void Main(string[] args)
         {
+            Console.WriteLine("Please enter the temperature: ");
+            string temperatureString = Console.ReadLine();
+            int digitalTemperature = int.Parse(temperatureString);
+            int newTemperature = 0;
 
+            Console.WriteLine("Is the temperature in (C)elcius, or (F)arenheit? ");
+            string celciusOrFarenheit = Console.ReadLine();
+            //if (celciusOrFarenheitString.Length > 1)
+            //{
+            //    Console.WriteLine("Please Enter Just the First Letter of Celcius or Farenheit: ");
+            //    celciusOrFarenheitString = Console.ReadLine();
+            //}
+
+            
+            if (celciusOrFarenheit[0] == 'F')
+            {
+                newTemperature = ((digitalTemperature - 32) * 5) / 9;
+                Console.WriteLine(digitalTemperature + "F is "+ newTemperature + "C");
+            }
+            else if (celciusOrFarenheit[0] == 'C')
+            {
+                newTemperature = ((digitalTemperature * 9) / 5) + 32;
+                Console.WriteLine(digitalTemperature + "C is " + newTemperature + "F");
+
+            }
 
 
         }

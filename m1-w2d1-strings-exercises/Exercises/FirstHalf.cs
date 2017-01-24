@@ -16,7 +16,14 @@ namespace Exercises
          */
         public string FirstHalf(string str)
         {
-            return null;
+            string results = "";
+
+            for (int i = 0; i < str.Length / 2; i++)
+            {
+                results = results + str[i];
+            }
+
+                return results;
         }
     }
 }

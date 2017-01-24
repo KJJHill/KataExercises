@@ -18,7 +18,21 @@ namespace Exercises
          */
         public bool HasBad(string str)
         {
-            return false;
+            bool result = false;
+
+            if (str.Length > 2)
+            {
+                if (str.Length == 3)
+                {
+                    result = (str[0] == 'b' && str[1] == 'a' && str[2] == 'd') ? true : false;
+                }
+                else
+                {
+                    result = ((str[0] == 'b' && str[1] == 'a' && str[2] == 'd')
+                        || (str[1] == 'b' && str[2] == 'a' && str[3] == 'd')) ? true : false;
+                }
+            }
+            return result;
         }
     }
 }
