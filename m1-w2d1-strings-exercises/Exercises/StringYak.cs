@@ -9,7 +9,8 @@ namespace Exercises
     public partial class StringExercises
     {
         /*
-         Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed, but 
+         Suppose the string "yak" is unlucky. Given a string, 
+         return a version where all the "yak" are removed, but 
          the "a" can be any char. The "yak" strings will not overlap.
          stringYak("yakpak") → "pak"
          stringYak("pakyak") → "pak"
@@ -17,7 +18,17 @@ namespace Exercises
          */
         public string StringYak(string str)
         {
-            return null;
+
+            string result = str;
+            int yakIndex = result.IndexOf("yak");
+
+            while (yakIndex >= 0)
+            {
+                result = result.Remove(result.IndexOf("yak"), 3);
+                yakIndex = result.IndexOf("yak");
+            }
+
+            return result;
         }
     }
 }

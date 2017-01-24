@@ -9,7 +9,8 @@ namespace Exercises
     public partial class StringExercises
     {
         /*
-         Given a string, return a version without both the first and last char of the string. The string 
+         Given a string, return a version without both the first 
+         and last char of the string. The string 
          may be any length, including 0.
          withouEnd2("Hello") → "ell"
          withouEnd2("abc") → "b"
@@ -17,7 +18,8 @@ namespace Exercises
          */
         public string WithouEnd2(string str)
         {
-            return null;
+            string result = (str.Length < 2) ? "" : str.Substring(1, str.Length - 2);
+            return result; 
         }
     }
 }
