@@ -9,7 +9,8 @@ namespace Exercises
     public partial class Exercises
     {
         /*
-         Given an array of Strings, return a List containing the same Strings in the same order 
+         Given an array of Strings, return a List containing the same 
+         Strings in the same order 
          except for any words that contain exactly 4 characters.
          no4LetterWords( {"Train", "Boat", "Car"} )  ->  ["Train", "Car"]
          no4LetterWords( {"Red", "White", "Blue"} )  ->  ["Red", "White"]
@@ -17,7 +18,17 @@ namespace Exercises
          */
         public List<string> No4LetterWords(string[] stringArray)
         {
-            return null;
+            List<string> result = new List<string>();
+
+            for (int i = 0; i< stringArray.Length; i++)
+            {
+                if (stringArray[i].Length != 4)
+                {
+                    result.Add(stringArray[i]);
+                }
+            }
+
+            return result;
         }
 
     }

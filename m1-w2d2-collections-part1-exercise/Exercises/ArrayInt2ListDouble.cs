@@ -16,7 +16,17 @@ namespace Exercises
          */
         public List<double> ArrayInt2ListDouble(int[] intArray)
         {
-            return null;
+            List<double> result = new List<double>();
+            double[] intDouble = new double[intArray.Length];
+
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                intDouble[i] = (double)intArray[i] / 2;
+            }
+
+            result = intDouble.ToList();
+
+            return result;
         }
 
     }
