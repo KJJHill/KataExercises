@@ -18,7 +18,7 @@ namespace Exercises
         {
             List<int> result = new List<int>();
 
-            for(int i = 0; i < integerArray.Length; i++)
+            for (int i = 0; i < integerArray.Length; i++)
             {
                 if (integerArray[i] % 2 == 1)
                 {

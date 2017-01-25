@@ -20,14 +20,14 @@ namespace Exercises
         {
             List<string> result = new List<string>();
 
-            for (int i = 0; i< stringArray.Length; i++)
+            foreach (string myString in stringArray)
             {
-                if (stringArray[i].Length != 4)
+                if (myString.Length != 4)
                 {
-                    result.Add(stringArray[i]);
+                    result.Add(myString);
                 }
             }
-
+ 
             return result;
         }
 
