@@ -42,7 +42,24 @@ namespace Collections.ExerciseProblems
          */
         public string AnimalGroupName(string animalName)
         {
-            return null;
+            string result = "";
+
+            Dictionary<string, string> animalKey = new Dictionary<string, string>();
+
+            animalKey.Add("rhino", "Crash");
+            animalKey.Add("giraffe", "Tower");
+            animalKey.Add("elephant", "Herd");
+            animalKey.Add("lion", "Pride");
+            animalKey.Add("crow", "Murder");
+            animalKey.Add("pigeon", "Kit");
+            animalKey.Add("flamingo", "Pat");
+            animalKey.Add("deer", "Herd");
+            animalKey.Add("dog", "Pack");
+            animalKey.Add("crocodile", "Float");
+
+            result = (animalKey.ContainsKey(animalName.ToLower())) ? animalKey[animalName.ToLower()] : "unknown";
+
+            return result;
         }
 
         /*
@@ -69,14 +86,28 @@ namespace Collections.ExerciseProblems
          */
         public double IsItOnSale(string itemNumber)
         {
-            return 0.00;
+            double result = 0.00;
+            Dictionary<string, double> discountKey = new Dictionary<string, double>();
+
+            discountKey.Add("kitchen4001", 0.20);
+            discountKey.Add("garage1070", 0.15);
+            discountKey.Add("livingroom", 0.10);
+            discountKey.Add("kitchen6073", 0.40);
+            discountKey.Add("bedroom3434", 0.60);
+            discountKey.Add("bath0073", 0.15);
+
+            result = (discountKey.ContainsKey(itemNumber.ToLower())) ? discountKey[itemNumber.ToLower()] : 0.00;
+
+            return result;
         }
 
         /*
-         * Modify and return the given Dictionary as follows: if "Peter" has more than 0 money, transfer half of it to "Paul",
+         * Modify and return the given Dictionary as follows: 
+            if "Peter" has more than 0 money, transfer half of it to "Paul",
          * but only if Paul has less than $10s.
          * 
-         * Note, monetary amounts are specified in cents: penny=1, nickel=5, ... $1=100, ... $10=1000, ...
+         * Note, monetary amounts are specified in cents: 
+            penny=1, nickel=5, ... $1=100, ... $10=1000, ...
          * 
          * robPeterToPayPaul({"Peter": 2000, "Paul": 99}) → {"Peter": 1000, "Paul": 1099}
          * robPeterToPayPaul({"Peter": 2000, "Paul": 30000}) → {"Peter": 2000, "Paul": 30000}
@@ -84,12 +115,26 @@ namespace Collections.ExerciseProblems
          */
         public Dictionary<string, int> RobPeterToPayPaul(Dictionary<string, int> peterPaul)
         {
-            return null;
+
+            Dictionary<string, int> result = new Dictionary<string, int>();
+            result = peterPaul;
+
+            if ((peterPaul["Peter"] > 0) && (peterPaul["Paul"] < 1000))
+            {
+                result["Peter"] = result["Peter"] / 2;
+                result["Paul"] = result["Paul"] + result["Peter"];
+            }
+
+
+            return result;
+
         }
 
         /*
-         * Modify and return the given Dictionary as follows: if "Peter" has $50 or more, AND "Paul" has $100 or more,
-         * then create a new "PeterPaulPartnership" worth a combined contribution of a quarter of each partner's
+         * Modify and return the given Dictionary as follows: 
+         if "Peter" has $50 or more, AND "Paul" has $100 or more,
+         * then create a new "PeterPaulPartnership" worth a 
+         combined contribution of a quarter of each partner's
          * current worth.
          * 
          * peterPaulPartnership({"Peter": 50000, "Paul": 100000}) → {"Peter": 37500, "Paul": 75000, "PeterPaulPartnership": 37500}
@@ -98,11 +143,23 @@ namespace Collections.ExerciseProblems
          */
         public Dictionary<string, int> PeterPaulPartnership(Dictionary<string, int> peterPaul)
         {
-            return null;
+            Dictionary<string, int> result = new Dictionary<string, int>();
+            result = peterPaul;
+
+            if ((peterPaul["Peter"] > 5000) && (peterPaul["Paul"] > 10000))
+            {
+                result["Peter"] = ((peterPaul["Peter"] / 4) * 3);
+                result["Paul"] = ((peterPaul["Paul"] / 4) * 3);
+                result["PeterPaulPartnership"] = (peterPaul["Paul"] / 4) + (peterPaul["Paul"] / 4);
+            }
+
+
+            return result;
         }
 
         /*
-         * Given an array of non-empty strings, return a Dictionary<string, string> where for every different string in the array, 
+         * Given an array of non-empty strings, return a Dictionary<string, string> 
+         where for every different string in the array, 
          * there is a key of its first character with the value of its last character.
          *
          * beginningAndEnding(["code", "bug"]) → {"b": "g", "c": "e"}
@@ -111,11 +168,20 @@ namespace Collections.ExerciseProblems
          */
         public Dictionary<string, string> BeginningAndEnding(string[] words)
         {
-            return null;
+            Dictionary<string, string> result = new Dictionary<string, string>();
+            foreach (string word in words)
+            {
+
+                result[word.First().ToString()] = word.Last().ToString();
+            }
+
+            return result;
         }
 
         /*
-         * Given an array of strings, return a Dictionary<string, int> with a key for each different string, with the value the 
+         * Given an array of strings, 
+         return a Dictionary<string, int> with a key for each different string, 
+         with the value the 
          * number of times that string appears in the array.
          * 
          * ** A CLASSIC **
@@ -128,11 +194,26 @@ namespace Collections.ExerciseProblems
          */
         public Dictionary<string, int> WordCount(string[] words)
         {
-            return null;
+            Dictionary<string, int> result = new Dictionary<string, int>();
+
+            foreach (string word in words)
+            {
+                if (result.ContainsKey(word))
+                {
+                    result[word] = ++result[word];
+                }
+                else
+                {
+                    result[word] = 1;
+                }
+            }
+
+            return result;
         }
 
         /*
-         * Given an array of int values, return a Dictionary<int, int> with a key for each int, with the value the 
+         * Given an array of int values, return a Dictionary<int, int> 
+         with a key for each int, with the value the 
          * number of times that int appears in the array.
          * 
          * ** The lesser known cousin of the the classic wordCount **
@@ -144,11 +225,26 @@ namespace Collections.ExerciseProblems
          */
         public Dictionary<int, int> IntCount(int[] ints)
         {
-            return null;
+            Dictionary<int, int> result = new Dictionary<int, int>();
+
+            foreach (int i in ints)
+            {
+                if (result.ContainsKey(i))
+                {
+                    result[i] = ++result[i];
+                }
+                else
+                {
+                    result[i] = 1;
+                }
+            }
+
+            return result;
         }
 
         /*
-         * Given an array of strings, return a Dictionary<string, Boolean> where each different string is a key and value
+         * Given an array of strings, return a Dictionary<string, Boolean> 
+         where each different string is a key and value
          * is true only if that string appears 2 or more times in the array.
          * 
          * wordMultiple(["a", "b", "a", "c", "b"]) → {"b": true, "c": false, "a": true}
@@ -158,12 +254,28 @@ namespace Collections.ExerciseProblems
          */
         public Dictionary<string, bool> WordMultiple(string[] words)
         {
-            return null;
+            Dictionary<string, bool> result = new Dictionary<string, bool>();
+
+            foreach (string word in words)
+            {
+                if (result.ContainsKey(word))
+                {
+                    result[word] = true;
+                }
+                else
+                {
+                    result[word] = false;
+                }
+            }
+
+            return result;
         }
 
         /*
-         * Given two Dictionarys, Dictionary<string, int>, merge the two into a new Dictionary, Dictionary<string, int> where keys in Dictionary2, 
-         * and their int values, are added to the int values of matching keys in Dictionary1. Return the new Dictionary.
+         * Given two Dictionarys, Dictionary<string, int>, merge the two into a new Dictionary,
+         Dictionary<string, int> where keys in Dictionary2, 
+         * and their int values, are added to the int values of matching keys in 
+         Dictionary1. Return the new Dictionary.
          * 
          * Unmatched keys and their int values in Dictionary2 are simply added to Dictionary1.
          *  
@@ -171,30 +283,67 @@ namespace Collections.ExerciseProblems
          * 	 → {"SKU1": 100, "SKU2": 64, "SKU3": 44, "SKU4": 5}
          * 
          */
-        public Dictionary<string, int> ConsolidateInventory(Dictionary<string, int> mainWarehouse, 
-            Dictionary<string, int> remoteWarehouse)
+        public Dictionary<string, int> ConsolidateInventory(Dictionary<string, int>
+            mainWarehouse, Dictionary<string, int> remoteWarehouse)
         {
-            return null;
+            Dictionary<string, int> unioned = new Dictionary<string, int>();
+            unioned = mainWarehouse;
+
+            foreach (string remoteSKU in remoteWarehouse.Keys)
+            {
+                if (unioned.ContainsKey(remoteSKU))
+                {
+                    unioned[remoteSKU] = unioned[remoteSKU] + remoteWarehouse[remoteSKU];
+                }
+                else
+                {
+                    unioned.Add(remoteSKU, remoteWarehouse[remoteSKU]);
+                }
+            }
+            return unioned;
         }
 
         /*
          * Just when you thought it was safe to get back in the water --- last2Revisited!!!!
          * 
-         * Given an array of strings, for each string, the count of the number of times that a substring length 2 appears 
+         * Given an array of strings, for each string,
+         the count of the number of times that a substring length 2 appears 
          * in the string and also as the last 2 chars of the string, so "hixxxhi" yields 1. 
          * 
-         * We don't count the end substring, but the substring may overlap a prior position by one.  For instance, "xxxx"
-         * has a count of 2, one pair at position 0, and the second at position 1. The third pair at position 2 is the
+         * We don't count the end substring, but the substring may overlap a 
+         prior position by one.  For instance, "xxxx"
+         * has a count of 2, one pair at position 0, and the second at position 1. 
+         The third pair at position 2 is the
          * end substring, which we don't count.  
          * 
-         * Return Dictionary<string, int>, where the key is string from the array, and its last2 count.
+         * Return Dictionary<string, int>, where the key is string from the array,
+         and its last2 count.
          *  
          * last2Revisited(["hixxhi", "xaxxaxaxx", "axxxaaxx"]) → {"hixxhi": 1, "xaxxaxaxx": 1, "axxxaaxx": 2}
          * 
          */
         public Dictionary<string, int> Last2Revisted(string[] words)
         {
-            return null;
+            Dictionary<string, int> result = new Dictionary<string, int>();
+
+            foreach (string word in words)
+            {
+                string last2 = word.Substring(word.Length - 2, 2);
+
+                result[word] = 0;
+
+                for (int i = 0; i < word.Length - 2; i++)
+                {
+                    if (word.IndexOf(last2, i) == i)
+                    {
+                        result[word] = ++result[word];
+                    }
+                }
+
+
+            }
+
+            return result;
         }
 
     }
