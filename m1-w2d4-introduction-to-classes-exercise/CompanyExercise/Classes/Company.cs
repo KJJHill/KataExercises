@@ -9,5 +9,11 @@ namespace TechElevator.Classes
     public class Company
     {
 
+        private string name;
+        private decimal price;
+        private double weightInOunces;
+
+
+
     }
 }

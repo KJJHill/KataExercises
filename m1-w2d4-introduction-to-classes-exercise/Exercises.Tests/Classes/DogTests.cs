@@ -21,7 +21,7 @@ namespace TechElevator.Classes.Tests
             FieldInfo fi = type.GetField("isSleeping");
             Assert.IsNotNull(fi, "Dog class needs the isSleeping variable.");
             Assert.AreEqual(typeof(bool), fi.FieldType, "isSleeping should be type: bool");
-            
+
             MethodInfo mi = type.GetMethod("MakeSound");
             Assert.IsNotNull(mi, "Dog class needs the MakeSound method.");
             Assert.AreEqual(typeof(string), mi.ReturnType, "MakeSound() method needs to return type: string");

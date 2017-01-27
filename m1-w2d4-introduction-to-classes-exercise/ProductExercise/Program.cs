@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechElevator.Classes;
 
 namespace ProductExercise
 {
@@ -26,15 +27,25 @@ namespace ProductExercise
 
             // Instantiate a new product
             // e.g. Product variableName = new Product();
+            Product myProduct = new Product();
 
             // Try Setting the weight of the product
             // e.g. variableName.PropertyName = value
+            myProduct.WeightInOunces = 9.0;
 
             // Try Getting the name of the Product
             // e.g. Console.WriteLine(variableName.PropertyName)
             // e.g. string name = variableName.PropertyName;
-
+            myProduct.Name = "Hello";
+            Console.WriteLine(myProduct.Name);
             // Try instantiating another product object and doing the same as above with it
+
+            Product my2Product = new Product();
+            my2Product.WeightInOunces = 8;
+            my2Product.Name = "Rutter Holding";
+            Console.WriteLine(my2Product.Name);
+            Console.WriteLine(my2Product.WeightInOunces);
+
         }
     }
 }
