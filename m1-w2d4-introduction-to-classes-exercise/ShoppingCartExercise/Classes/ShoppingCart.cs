@@ -24,7 +24,8 @@ namespace TechElevator.Classes
         
         public double GetAveragePricePerItem()
         {
-            return (totalAmountOwed / totalNumberOfItems);
+            double result = (totalNumberOfItems > 0)? (totalAmountOwed / totalNumberOfItems): 0;
+            return result;
         }
 
         public void AddItems(int numberOfItems, double pricePerItem)

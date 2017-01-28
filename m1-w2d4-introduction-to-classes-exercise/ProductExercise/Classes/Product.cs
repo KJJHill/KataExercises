@@ -9,9 +9,9 @@ namespace TechElevator.Classes
     public class Product
     {
         // Class Code Goes Here
-        private string name;
-        private decimal price;
-        private double weightInOunces;
+        public string name;
+        public decimal price;
+        public double weightInOunces;
 
         public double WeightInOunces
         {
