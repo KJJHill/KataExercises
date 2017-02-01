@@ -52,7 +52,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="NonStartTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AnimalGroupNameTest.cs" />
+    <Compile Include="CigarPartyTest.cs" />
+    <Compile Include="Lucky13Test.cs" />
+    <Compile Include="MaxEnd3Test.cs" />
+    <Compile Include="SameFirstLastTest.cs" />
+    <Compile Include="StringBitsTest.cs" />
+    <Compile Include="WordCountTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Exercises\Exercises.csproj">
