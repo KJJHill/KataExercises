@@ -54,8 +54,8 @@
   <ItemGroup>
     <Compile Include="KataFizzBuzzTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="KataPrimeFactors.cs" />
-    <Compile Include="KataRomanNumerals.cs" />
+    <Compile Include="KataPrimeFactorsTests.cs" />
+    <Compile Include="KataRomanNumeralsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Exercises\Exercises.csproj">
