@@ -10,6 +10,7 @@ namespace PostageCalculator.Classes
     {
         private int distance;
 
+
         public int Distance
         {
             get { return distance; }

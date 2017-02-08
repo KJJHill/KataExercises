@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace TollBoothCalculator.Classes
 {
+
     public class Tank : IVehichle
     {
         private int distance;

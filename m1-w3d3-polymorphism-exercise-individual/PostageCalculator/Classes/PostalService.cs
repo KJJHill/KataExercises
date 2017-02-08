@@ -8,6 +8,7 @@ namespace PostageCalculator.Classes
 {
     public class PostalService : IDeliveryDriver
     {
+
         private double rate;
         public double Rate
         {

@@ -7,6 +7,7 @@ using TollBoothCalculator.Classes;
 
 namespace TollBoothCalculator
 {
+
     class Program
     {
         static void Main(string[] args)

@@ -9,6 +9,7 @@ namespace PostageCalculator
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             Console.BackgroundColor = ConsoleColor.DarkGray;

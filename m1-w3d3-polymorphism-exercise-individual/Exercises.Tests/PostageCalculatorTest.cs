@@ -8,6 +8,7 @@ namespace Exercises.Tests
     public class PostageCalculatorTest
     {
         [TestMethod]
+
         public void PSFirstClassTest()
         {
             PostalService firstClassTest = new PostalService(2, 1, "FirstClass");

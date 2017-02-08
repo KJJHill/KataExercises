@@ -4,6 +4,7 @@ using TollBoothCalculator.Classes;
 
 namespace Exercises.Tests
 {
+
     [TestClass]
     public class TollBoothCalculatorTest
     {

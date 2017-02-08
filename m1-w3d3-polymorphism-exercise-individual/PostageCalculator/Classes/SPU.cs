@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PostageCalculator.Classes
 {
+
     public class SPU : IDeliveryDriver
     {
         private int distance;

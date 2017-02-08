@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace TollBoothCalculator.Classes
 {
+
     public interface IVehichle
     {
         int Distance { get; }

@@ -8,6 +8,7 @@ namespace TollBoothCalculator.Classes
 {
     public class Car : IVehichle
     {
+
         private bool hasTrailer;
         private int distance;
         private double toll;

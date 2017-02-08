@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace TollBoothCalculator.Classes
 {
+
     public class Truck : IVehichle
     {
         private int numberOfAxles;
