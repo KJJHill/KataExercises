@@ -276,41 +276,67 @@ namespace VariableNaming
             32. Kim has 4 cousins. She wants to give each one 5 pieces of gum. How
             much gum will she need?
             */
+            int cousins = 4;
+            int piecesOfGum = 5;
+            int totalGum = cousins * piecesOfGum;
 
             /*
             33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
             left?
             */
+            decimal dansMoney = 3M;
+            decimal candyBar = 1M;
+            decimal remaining = dansMoney - candyBar;
+
 
             /*
             34. 5 boats are in the lake. Each boat has 3 people. How many people are
             on boats in the lake?
             */
 
+            int boats = 5;
+            int peopleInBoats = 3;
+            int totalPeople = boats * peopleInBoats;
+
             /*
             35. Ellen had 380 legos, but she lost 57 of them. How many legos does she
             have now?
             */
+            int legos = 380;
+            int legosLost = 57;
+            int remainingLegos = legos - legosLost;
 
             /*
             36. Arthur baked 35 muffins. How many more muffins does Arthur have to
             bake to have 83 muffins?
             */
+            int muffins = 35;
+            int totalMuffinsWanted = 83;
+            int muffinsNeeded = totalMuffinsWanted - muffins;
 
             /*
             37. Willy has 1400 crayons. Lucy has 290 crayons. How many more
             crayons does Willy have then Lucy?
             */
+            int willyCrayons = 1400;
+            int lucyCrayons = 290;
+            int extraCrayons = willyCrayons - lucyCrayons;
 
             /*
             38. There are 10 stickers on a page. If you have 22 pages of stickers, how
             many stickers do you have?
             */
+            int stickersOnAPage = 10;
+            int pages = 22;
+            int totalStickers = stickersOnAPage * pages;
 
             /*
             39. There are 96 cupcakes for 8 children to share. How much will each
             person get if they share the cupcakes equally?
             */
+            int cupcakes = 96;
+            int children = 8;
+            int cupcakesPerChild = cupcakes / children;
 
             /*
             40. She made 47 gingerbread cookies which she will distribute equally in
@@ -319,13 +345,16 @@ namespace VariableNaming
             */
             int gingerbreadCookies = 47;
             int cookiesLeftOut = gingerbreadCookies % 6;
-            //Console.WriteLine(cookiesLeftOut);
 
             /*
             41. She also prepared 59 croissants which she plans to give to her 8
             neighbors. If each neighbor received and equal number of croissants,
             how many will be left with Marian?
             */
+
+            int croissants = 59;
+            int neighbors = 8;
+            int leftOver = croissants % neighbors;
 
             /*
             42. Marian also baked oatmeal cookies for her classmates. If she can
@@ -334,13 +363,17 @@ namespace VariableNaming
             */
             int oatmealCookies = 276;
             int traysNeeded = (oatmealCookies / 12) + 1;
-            
+
 
             /*
             43. Marian’s friends were coming over that afternoon so she made 480
             bite-sized pretzels. If one serving is equal to 12 pretzels, how many
             servings of bite-sized pretzels was Marian able to prepare?
             */
+
+            int pretzels = 480;
+            int servingSize = 12;
+            int totalServings = pretzels / servingSize;
 
             /*
             44. Lastly, she baked 53 lemon cupcakes for the children living in the city
@@ -360,7 +393,7 @@ namespace VariableNaming
             int preparedCarrots = 74;
             int peopleEatingCarrots = 12;
             int leftUneaten = preparedCarrots % peopleEatingCarrots;
-            
+
 
             /*
             46. Susie and her sister gathered all 98 of their teddy bears and placed
@@ -368,12 +401,20 @@ namespace VariableNaming
             maximum of 7 teddy bears, how many shelves will be filled?
             */
 
+            int teddyBears = 98;
+            int shelfMaximum = 7;
+            int totalFullShelves = teddyBears / shelfMaximum;
+
 
             /*
             47. Susie’s mother collected all family pictures and wanted to place all of
             them in an album. If an album can contain 20 pictures, how many
             albums will she need if there are 480 pictures?
             */
+
+            int totalPictures = 480;
+            int picturesInBook = 20;
+            int totalBooks = totalPictures / picturesInBook;
 
             /*
             48. Joe, Susie’s brother, collected all 94 trading cards scattered in his
@@ -392,10 +433,17 @@ namespace VariableNaming
             how many books will each shelf contain?
             */
 
+            int books = 210;
+            int shelves = 10;
+            int booksOnSelf = books / shelves;
+
             /*
             50. Cristina baked 17 croissants. If she planned to serve this equally to
             her seven guests, how many will each have?
             */
+            int croissant = 17;
+            int guests = 7;
+            int croissantPerGuest = croissant / guests;
 
            
 

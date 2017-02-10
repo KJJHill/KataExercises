@@ -22,6 +22,8 @@ namespace PostageCalculator
             Console.Write("What distance will it be traveling? ");
             int distance = int.Parse(Console.ReadLine());
 
+            Console.WriteLine(weight.ToString("0.00"));
+
             if (weightType == 'p')
             {
                 weight = weight * 16;
