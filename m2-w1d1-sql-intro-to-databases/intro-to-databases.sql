@@ -64,7 +64,7 @@ select name, region from country
 where continent in ('North America', 'South America') and region not in ('Caribean', 'Caribbean')
 	
 -- 15. The name, population, and GNP of all countries with a GNP greater than $1 trillion dollars and a population of less than 100 million people (4 rows)
-select name, population, gnp from country
+select top 10 name, population, gnp from country
 where gnp > 1000000 and population < 100000000
 	
 -- 16. The name and population of all cities in Texas that have a population of greater than 1 million people (3 rows)
@@ -88,7 +88,7 @@ select name, continent, gnp, lifeexpectancy from country
 where lifeexpectancy >70 and gnp between 1 and 100
 	
 -- 21. The per capita GNP (i.e. GNP divided by population) in US Dollars of all countries in Europe (46 rows)
-select (gnp/population), code, region from country
+select (gnp*100000/population), code, region from country
 where population >0 and continent = 'Europe'
 
 -- 22. The number of years since independence for all countries that have a year of independence (192 rows)
