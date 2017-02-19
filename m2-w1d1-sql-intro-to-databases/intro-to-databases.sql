@@ -95,3 +95,9 @@ where population >0 and continent = 'Europe'
 select (2017 - indepyear) from country
 where indepyear is not null 
 
+SELECT countrycode, district, count(*) as citycount
+FROM city 
+group by countrycode, district
+order by countrycode desc, district
+
+
