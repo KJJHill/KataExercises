@@ -98,18 +98,19 @@ select district, count(name) from city where countrycode = 'USA' group by distri
 	
 -- 19. The count of countries on each continent, ordered from highest to lowest.
 -- (highest count: 58, "Africa")
-
+select continent, count(name) from country group by continent order by count(name) desc
 	
 -- 20. The count of cities in each country ordered from highest to lowest.
 -- (largest number of  cities ib a country: 363, "CHN")
-
+select countrycode, count(name) from city group by countrycode order by count(name) desc
 	
 -- 21. The population of the largest city in each country ordered from highest to 
 -- lowest.
 -- (largest city population in world: 10500000, "IND")
-
+select countrycode, max(population) from city group by countrycode order by max(population) desc 
 
 -- 22. The average, minimum, and maximum non-null life expectancy of each continent 
 -- ordered from lowest to highest average life expectancy. 
 -- (lowest average life expectancy: 52.5719, 37.2, 76.8, "Africa")
-
+select continent, avg(lifeexpectancy), MIN(lifeexpectancy), MAX(lifeexpectancy) from country 
+where lifeexpectancy is not null group by continent order by AVG(lifeexpectancy)
