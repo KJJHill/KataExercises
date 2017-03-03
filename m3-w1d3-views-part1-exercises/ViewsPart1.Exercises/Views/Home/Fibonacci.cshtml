@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Fibonacci</title>
+    <link href="~/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <h3>Exercise 2 - Fibonacci 25</h3>
+        <ul>
+            @{ 
+                int total = 1;
+                int firstTerm = 0;
+                int secondTerm = 1;
+
+                for (int i = 1; i <= 25; i++)
+                {
+                    total = firstTerm + secondTerm;
+                    firstTerm = secondTerm;
+                    secondTerm = total;
+                    <li>@total</li>
+                }
+            }
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+
+    int count = int.Parse(Request.QueryString["count"]);
+    string word = Request.QueryString["word"];
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Echo</title>
+    <link href="~/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        @for (int i = 0; i <= count; i++)
+        {
+            <p style="font-size:@(count-i)px">@word</p>
+        }
+    </div>
+</body>
+</html>
