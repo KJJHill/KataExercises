@@ -1,0 +1,51 @@
+﻿@using Exercises.Models
+@model List<Product>
+
+@{
+    ViewBag.Title = "Tile";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Content/styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Tile View</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="~/Product/List">List Layout</a></li>
+            <li><a href="~/Product/Table">Table Layout</a></li>
+            <li><a href="~/Product/Tile">Tile Layout</a></li>
+        </ul>
+
+    </nav>
+    <section id="main-content">
+        <h1>Toy Department</h1>
+        <div id="container" class="cols">
+            @foreach (Product product in Model)
+            {
+                string bestSeller = (product.IsTopSeller) ? "BEST SELLER!" : "";
+                string remainingStock = (product.RemainingStock < 10) ? "Only " + product.RemainingStock + " left!" : "";
+
+                <div class="box">
+                    <div><img class="toy_image" src="~/Content/images/@product.ImageName" /></div>
+                    <div><strong>@product.Name <font color="red">@bestSeller </font></strong></div>
+                    <div>   by @product.Manufacturer</div>
+                    <div><font color="blue"> @remainingStock </font> </div>
+                    <div><font id="price">$ @product.Price</font></div>
+                    <div><strong>Weight: </strong>  @product.WeightIbLbs lbs</div>
+                    <div> <img id="rating" src="/Content/images/@Convert.ToInt32(product.AverageRating)-star.png" /></div>
+                </div>
+            }
+        </div>
+    </section>
+</body>
+</html>
+

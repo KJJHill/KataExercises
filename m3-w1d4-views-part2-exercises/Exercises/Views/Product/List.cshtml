@@ -1,0 +1,55 @@
+﻿@using Exercises.Models
+@model List<Product>
+@{
+    ViewBag.Title = "List";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Content/styles.css" />
+</head>
+<body>
+    <header>
+        <h1>List View</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="~/Product/List">List Layout</a></li>
+            <li><a href="~/Product/Table">Table Layout</a></li>
+            <li><a href="~/Product/Tile">Tile Layout</a></li>
+        </ul>
+
+    </nav>
+    <section id="main-content">
+        <h1>Toy Department</h1>
+        @foreach (Product product in Model)
+        {
+            string bestSeller = (product.IsTopSeller) ? "BEST SELLER!" : "";
+            string remainingStock = (product.RemainingStock < 10) ? "Only " + product.RemainingStock + " left!" : "";
+
+           <div class="page-wrap">
+                <section class="product-content" role="main">
+                    <h2>@product.Name <font color="red">@bestSeller </font></h2>
+                    <p>by @product.Manufacturer</p>
+                    <p style="color:blue"> @remainingStock </p>
+                    <p id="price">$ @product.Price</p>
+                    <p><strong>Weight: </strong>  @product.WeightIbLbs lbs</p>
+                    <img id="rating" src="/Content/images/@Convert.ToInt32(product.AverageRating)-star.png" />
+                </section>
+
+                <section role="navigation">
+                    <img class="toy_image" src="~/Content/images/@product.ImageName" />
+                </section>
+
+           </div>
+            <hr width="85%" />
+        }
+
+    </section>
+</body>
+</html>

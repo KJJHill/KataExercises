@@ -1,0 +1,95 @@
+﻿@using Exercises.Models
+@model List<Product>
+
+@{
+    ViewBag.Title = "Table";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Content/styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Table View</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="~/Product/List">List Layout</a></li>
+            <li><a href="~/Product/Table">Table Layout</a></li>
+            <li><a href="~/Product/Tile">Tile Layout</a></li>
+        </ul>
+
+    </nav>
+    <section id="main-content">
+        <h1>Toy Department</h1>
+        <table >
+            <tr>
+                <td id="imageRow"><!-- empty for the images--></td>
+                @foreach (Product product in Model)
+                {
+                    <td><img class="table_toy_image" src="~/Content/images/@product.ImageName" /></td>
+                }
+            </tr>
+            <tr id="bestSellerRow">
+                <td><!-- empty for the Best Seller--></td>
+                @foreach (Product product in Model)
+                {
+                    <td>
+                        @if (product.IsTopSeller)
+                        {
+                        <font color="red">BEST SELLER!</font>
+                        }
+                    </td>
+
+                }
+            </tr>
+            <tr id="nameRow" class="greyRow">
+                <th>Name </th>
+                @foreach (Product product in Model)
+                {
+                    <td>@product.Name</td>
+                }
+            </tr>
+
+            <tr id="ratingRow">
+                <th>Rating </th>
+                @foreach (Product product in Model)
+                {
+                    <td><img id="table_rating" src="/Content/images/@Convert.ToInt32(product.AverageRating)-star.png" /></td>
+                }
+            </tr>
+
+            <tr id="MFRRow" class="greyRow">
+                <th>MFR </th>
+                @foreach (Product product in Model)
+                {
+                    <td>@product.Manufacturer</td>
+                }
+            </tr>
+
+            <tr id="priceRow">
+                <th>Price </th>
+                @foreach (Product product in Model)
+                {
+                    <td id="price">@product.Price</td>
+                }
+            </tr>
+
+            <tr id="weightRow" class="greyRow">
+                <th>Weight (in lbs) </th>
+                @foreach (Product product in Model)
+                {
+                    <td>@product.WeightIbLbs</td>
+                }
+            </tr>
+        </table>
+
+    </section>
+</body>
+</html>

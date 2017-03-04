@@ -16,5 +16,6 @@ namespace Exercises.Models
         public double AverageRating { get; set; }
         public int RemainingStock { get; set; }
         public bool IsTopSeller { get; set; }
+        public string Description { get; set; }
     }
 }
