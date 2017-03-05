@@ -2,32 +2,10 @@
 @model List<Product>
 
 @{
-    ViewBag.Title = "Tile";
-    Layout = null;
+    ViewBag.Title = "Tile View";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="stylesheet" href="~/Content/styles.css" />
-</head>
-<body>
-    <header>
-        <h1>Tile View</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="~/Product/List">List Layout</a></li>
-            <li><a href="~/Product/Table">Table Layout</a></li>
-            <li><a href="~/Product/Tile">Tile Layout</a></li>
-        </ul>
-
-    </nav>
-    <section id="main-content">
-        <h1>Toy Department</h1>
         <div id="container" class="cols">
             @foreach (Product product in Model)
             {
@@ -35,8 +13,10 @@
                 string remainingStock = (product.RemainingStock < 10) ? "Only " + product.RemainingStock + " left!" : "";
 
                 <div class="box">
-                    <div><img class="toy_image" src="~/Content/images/@product.ImageName" /></div>
-                    <div><strong>@product.Name <font color="red">@bestSeller </font></strong></div>
+                    <div>
+                        <a href='@Url.Action("Detail", new { product.ProductId })'><img class="toy_image" src="~/Content/images/@product.ImageName" /></a>
+                    </div>
+                    <div><strong>@Html.ActionLink(product.Name, "Detail", new { product.ProductId }) <font color="red">@bestSeller </font></strong></div>
                     <div>   by @product.Manufacturer</div>
                     <div><font color="blue"> @remainingStock </font> </div>
                     <div><font id="price">$ @product.Price</font></div>
@@ -45,7 +25,5 @@
                 </div>
             }
         </div>
-    </section>
-</body>
-</html>
+
 

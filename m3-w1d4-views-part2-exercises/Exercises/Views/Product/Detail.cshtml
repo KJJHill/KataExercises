@@ -1,0 +1,36 @@
+﻿@using Exercises.Models
+@{
+    ViewBag.Title = "Detail View " + Model.Name;
+}
+
+@model Product
+
+<div class="page-wrap">
+    <section class="product-content" role="main">
+        <h2>@Model.Name 
+   
+                 @if (@Model.IsTopSeller)
+            {
+                <font color="red">BEST SELLER! </font>
+            }
+        </h2>
+
+        <p>by @Model.Manufacturer</p>
+      
+          @if (@Model.RemainingStock < 10)
+        {
+            <p style="color:blue"> Only @Model.RemainingStock left!</p>
+        }
+
+        <img id="rating" src="/Content/images/@Convert.ToInt32(Model.AverageRating)-star.png" />
+        <p id="price">Price: $ @Model.Price</p>
+        <p><strong>Weight: </strong>  @Model.WeightIbLbs lbs</p>
+        <p><strong>Description: </strong> @Model.Description </p>
+
+    </section>
+
+    <section role="navigation">
+        <img class="toy_image" src="~/Content/images/@Model.ImageName" />
+    </section>
+
+</div>

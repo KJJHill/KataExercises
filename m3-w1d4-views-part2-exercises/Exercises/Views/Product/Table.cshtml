@@ -2,38 +2,16 @@
 @model List<Product>
 
 @{
-    ViewBag.Title = "Table";
-    Layout = null;
+    ViewBag.Title = "Table View";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="stylesheet" href="~/Content/styles.css" />
-</head>
-<body>
-    <header>
-        <h1>Table View</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="~/Product/List">List Layout</a></li>
-            <li><a href="~/Product/Table">Table Layout</a></li>
-            <li><a href="~/Product/Tile">Tile Layout</a></li>
-        </ul>
-
-    </nav>
-    <section id="main-content">
-        <h1>Toy Department</h1>
         <table >
             <tr>
                 <td id="imageRow"><!-- empty for the images--></td>
                 @foreach (Product product in Model)
                 {
-                    <td><img class="table_toy_image" src="~/Content/images/@product.ImageName" /></td>
+                    <td><a href='@Url.Action("Detail", new { product.ProductId })'><img class="table_toy_image" src="~/Content/images/@product.ImageName" /></a></td>
                 }
             </tr>
             <tr id="bestSellerRow">
@@ -53,7 +31,7 @@
                 <th>Name </th>
                 @foreach (Product product in Model)
                 {
-                    <td>@product.Name</td>
+                    <td>@Html.ActionLink(product.Name, "Detail", new { product.ProductId })</td>
                 }
             </tr>
 
@@ -90,6 +68,3 @@
             </tr>
         </table>
 
-    </section>
-</body>
-</html>
