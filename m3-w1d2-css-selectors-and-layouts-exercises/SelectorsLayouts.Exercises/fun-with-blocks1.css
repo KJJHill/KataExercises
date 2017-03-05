@@ -1,6 +1,7 @@
 html {
   font: 96px Courier;
   color: white;
+  font-weight: 500;
 }
 .box {
   padding: 50px;
