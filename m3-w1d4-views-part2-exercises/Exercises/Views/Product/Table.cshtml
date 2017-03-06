@@ -11,7 +11,7 @@
                 <td id="imageRow"><!-- empty for the images--></td>
                 @foreach (Product product in Model)
                 {
-                    <td><a href='@Url.Action("Detail", new { product.ProductId })'><img class="table_toy_image" src="~/Content/images/@product.ImageName" /></a></td>
+                    <td><a href='@Url.Action("Detail", new { id = product.ProductId })'><img class="table_toy_image" src="~/Content/images/@product.ImageName" /></a></td>
                 }
             </tr>
             <tr id="bestSellerRow">
@@ -31,7 +31,7 @@
                 <th>Name </th>
                 @foreach (Product product in Model)
                 {
-                    <td>@Html.ActionLink(product.Name, "Detail", new { product.ProductId })</td>
+                    <td>@Html.ActionLink(product.Name, "Detail", new { id = product.ProductId })</td>
                 }
             </tr>
 

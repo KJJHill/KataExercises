@@ -14,9 +14,9 @@
 
                 <div class="box">
                     <div>
-                        <a href='@Url.Action("Detail", new { product.ProductId })'><img class="toy_image" src="~/Content/images/@product.ImageName" /></a>
+                        <a href='@Url.Action("Detail", new { id = product.ProductId })'><img class="toy_image" src="~/Content/images/@product.ImageName" /></a>
                     </div>
-                    <div><strong>@Html.ActionLink(product.Name, "Detail", new { product.ProductId }) <font color="red">@bestSeller </font></strong></div>
+                    <div><strong>@Html.ActionLink(product.Name, "Detail", new { id = product.ProductId }) <font color="red">@bestSeller </font></strong></div>
                     <div>   by @product.Manufacturer</div>
                     <div><font color="blue"> @remainingStock </font> </div>
                     <div><font id="price">$ @product.Price</font></div>

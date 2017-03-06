@@ -12,7 +12,7 @@
 
     <div class="page-wrap">
         <section class="product-content" role="main">
-            <h2>@Html.ActionLink(product.Name, "Detail", new { product.ProductId }) <font color="red">@bestSeller </font></h2>
+            <h2>@Html.ActionLink(product.Name, "Detail", new { id = product.ProductId }) <font color="red">@bestSeller </font></h2>
             <p>by @product.Manufacturer</p>
             <p style="color:blue"> @remainingStock </p>
             <p id="price">$ @product.Price</p>
@@ -21,7 +21,7 @@
         </section>
 
         <section role="navigation">
-            <a href='@Url.Action("Detail", new { product.ProductId })'><img class="toy_image" src="~/Content/images/@product.ImageName" /></a>
+            <a href='@Url.Action("Detail", new { id = product.ProductId })'><img class="toy_image" src="~/Content/images/@product.ImageName" /></a>
         </section>
 
     </div>

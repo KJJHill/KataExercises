@@ -27,9 +27,9 @@ namespace Exercises.Controllers
             return View("Table", GetProductsForDisplay());
         }
 
-        public ActionResult Detail(string ProductId)
+        public ActionResult Detail(string id)
         {
-            var product = GetProductsForDisplay().Find(p => p.ProductId == ProductId.ToUpper());
+            var product = GetProductsForDisplay().Find(p => p.ProductId == id.ToUpper());
             return View("Detail", product);
         }
 
