@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model bool
+
+@if (Model)
+{
+    <h1> Great Party!!!</h1>
+    <img src="~/Content/Images/happy-squirrel.png" />
+}
+else
+{
+    <h1> Ugh!!!</h1>
+    <img src="~/Content/Images/sad-squirrel.png" />
+}

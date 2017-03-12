@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Color Name";
+}
+
+
+<h1>@ViewBag.Title</h1>
+
+@using (Html.BeginForm("ColorNameResult", "Home", FormMethod.Get))
+{
+    <h2>Enter Name:</h2>
+        @Html.Label("First:")
+        @Html.TextBox("First")
+    <br />
+
+        @Html.Label("Last:")
+        @Html.TextBox("Last")
+    <br />
+   
+ <h2>Choose Color: </h2>
+        @Html.Label("Red")
+        @Html.CheckBox("Red")
+    <br />
+        @Html.Label("Blue")
+        @Html.CheckBox("Blue")
+    <br />
+        @Html.Label("Green")
+        @Html.CheckBox("Green")
+    <br />
+
+    <input type="submit" value="Submit" />
+}

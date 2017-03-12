@@ -1,0 +1,23 @@
+﻿@using Exercises.Web.Models
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Person
+
+<h2>Colorized Name</h2>
+
+<h3>First name: @Model.FirstName</h3>
+<h3>Last name: @Model.LastName</h3>
+
+<br />
+<br />
+
+
+@foreach (string color in @Model.ColorsForName)
+{
+    <font size=24 color= "@color" >@Model.FirstName @Model.LastName </font>
+    <br />
+}
+

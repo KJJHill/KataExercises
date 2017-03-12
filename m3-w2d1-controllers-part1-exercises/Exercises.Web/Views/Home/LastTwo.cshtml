@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Reverse Last Two Characters";
+}
+
+
+<h1>@ViewBag.Title</h1>
+
+@using (Html.BeginForm("LastTwoResult", "Home", FormMethod.Get))
+{
+
+    <h2>Enter Numbers: </h2>
+
+    for (int i = 1; i< 11; i++)
+     {               
+            @Html.Label("Word " + @i +":")
+            @Html.TextBox("Word" + i)
+            <br />
+      }           
+
+    <input type="submit" value="Submit" />
+}
+

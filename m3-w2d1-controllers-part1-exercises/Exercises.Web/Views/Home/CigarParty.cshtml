@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Squirrel Cigar Party";
+}
+
+
+<h1>@ViewBag.Title</h1>
+
+@using (Html.BeginForm("CigarPartyResult", "Home", FormMethod.Get))
+{
+
+    <img src="~/Content/Images/smoking-squirrel.png" />
+    
+    <br />
+
+            @Html.Label("Number of Squirrels:")
+            @Html.TextBox("Squirrels")
+
+    <br />
+            @Html.Label("Is it the weekend? ")
+            @Html.CheckBox("isWeekend")
+
+    <input type="submit" value="Submit" />
+}
+

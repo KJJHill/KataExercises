@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "FizzBuzz Revisited";
+}
+
+
+<h1>@ViewBag.Title</h1>
+
+@using (Html.BeginForm("FizzBuzzResult", "Home", FormMethod.Get))
+{
+
+    <h2>Enter Fizz Buzz Information: </h2>
+            @Html.Label("Divisable By:")
+            @Html.TextBox("Divisor1")
+    <br />
+
+            @Html.Label("Divisible By:")
+            @Html.TextBox("Divisor2")
+    <br />
+
+            @Html.Label("Alternative Fizz:")
+            @Html.TextBox("Fizz")
+    <br />
+
+            @Html.Label("Alternative Buzz")
+            @Html.TextBox("Buzz")
+    <br />
+    <br />
+    <h2>Enter Numbers: </h2>
+            @Html.Label("Number 1:")
+            @Html.TextBox("Number1")
+    <br />
+            @Html.Label("Number 2:")
+            @Html.TextBox("Number2")
+    <br />
+            @Html.Label("Number 3:")
+            @Html.TextBox("Number3")
+    <br />
+            @Html.Label("Number 4:")
+            @Html.TextBox("Number4")
+    <br />
+            @Html.Label("Number 5:")
+            @Html.TextBox("Number5")
+    <br />
+
+
+    <input type="submit" value="Submit" />
+}
+
+

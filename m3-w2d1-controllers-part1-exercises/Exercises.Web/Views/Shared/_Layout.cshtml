@@ -3,11 +3,30 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Styles.css">
     <title>@ViewBag.Title</title>
 </head>
-<body>
-    <div>
-        @RenderBody()
+    <body class="news">
+        <header>
+            <div class="nav">
+                <ul>
+                    <li class="Order">@Html.ActionLink("Order Name", "Order", "Home")</li>
+                    <li class="ColorName">@Html.ActionLink("Color Name", "ColorName", "Home")</li>
+                    <li class="FizzBuzz">@Html.ActionLink("FizzBuzz Revisited", "FizzBuzz", "Home")</li>
+                    <li class="LastTwo">@Html.ActionLink("Last Two", "LastTwo", "Home")</li>
+                    <li class="BabyLotto">@Html.ActionLink("Baby Lotto", "BabyLotto", "Home")</li>
+                    <li class="CigarParty">@Html.ActionLink("Cigar Pary", "CigarParty", "Home")</li>
+                </ul>
+            </div>
+        </header>
+
+
+
+
+
+
+    <div align="center">
+            @RenderBody()
     </div>
 </body>
 </html>

@@ -1,0 +1,18 @@
+﻿@using Exercises.Web.Models
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Person
+
+<h2>Ordered Name</h2>
+
+<h3>First name: @Model.FirstName</h3>
+<h3>Middle name: @Model.Middle </h3>
+<h3>Last name: @Model.LastName</h3>
+
+<br />
+<br />
+
+<h3>Ordered: @Model.OrderedName </h3>

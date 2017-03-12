@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<string>
+
+    <h2>FizzBuzz Revisited</h2>
+
+    <h3>Divisible by: @Model[0]</h3>
+    <h3>Divisible by: @Model[1]</h3>
+    <h3>Divisible by Both: @Model[0] and @Model[1]</h3>
+
+    <br />
+    <br />
+
+    <h3>Alternative Fizz: @Model[2]</h3>
+    <h3>Alternative Buzz: @Model[3]</h3>
+    <h3>Alternative FizzBuzz: @Model[2]@Model[3]</h3>
+
+    @for (int i = 4; i< @Model.Count; i++)
+    {
+        <font size=24>@Model[i] </font>
+        <br />
+    }
+
