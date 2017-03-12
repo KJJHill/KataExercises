@@ -10,8 +10,8 @@ namespace FormsWithHttpPost.DAL
     public class ReviewSqlDAL : IReviewDAL
     {
         string connectionString = @"Data Source=DESKTOP-ICT08NO\SQLEXPRESS;Initial Catalog=BookReview;Integrated Security=True";
-        string SQL_GetAllReviews = @"Select username, rating, title, message, review_date, id from review;";
-        string SQL_SaveReview = @"Insert into review (username, rating, title, message, review_date) values (@username, @rating, @title, @message, GETDATE())";
+        string SQL_GetAllReviews = @"Select username, rating, review_title, review_text, review_date, review_id from reviews;";
+        string SQL_SaveReview = @"Insert into reviews (username, rating, review_title, review_text, review_date) values (@username, @rating, @title, @message, GETDATE())";
 
         public List<Review> GetAllReviews()
         {
@@ -30,11 +30,11 @@ namespace FormsWithHttpPost.DAL
                     while (reader.Read())
                     {
                         Review r = new Review();
-                        r.Id = Convert.ToInt32(reader["id"]);
+                        r.Id = Convert.ToInt32(reader["review_id"]);
                         r.Username = Convert.ToString(reader["username"]);
                         r.Rating = Convert.ToInt32(reader["rating"]);
-                        r.Title = Convert.ToString(reader["title"]);
-                        r.Message = Convert.ToString(reader["message"]);
+                        r.Title = Convert.ToString(reader["review_title"]);
+                        r.Message = Convert.ToString(reader["review_text"]);
                         r.ReviewDate = Convert.ToDateTime(reader["review_date"]);
 
                         result.Add(r);
