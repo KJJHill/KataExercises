@@ -1,0 +1,29 @@
+﻿@using FormsWithHttpPost.Models;
+@{
+    ViewBag.Title = "Past Reviews";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Review>
+
+<h2>@ViewBag.Title</h2>
+
+<img src="~/Content/forDummies.png" />
+
+@foreach (Review r in Model)
+{
+    <p>
+        <strong>@r.Title</strong>
+         
+            @for (int i = 1; i<= r.Rating; i++)
+            {
+                <img src="~/Content/star.png" />
+            }  
+        
+        <br />        
+            by @r.Username on @r.ReviewDate
+        <br />
+            @r.Message
+    </p>
+}
+

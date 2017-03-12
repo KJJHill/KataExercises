@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "New Book Review";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h2>@ViewBag.Message</h2>
+
+<br />
+@using (Html.BeginForm("SeeAllReviews", "Home", FormMethod.Post))
+{
+        @Html.Label("Enter your username:")
+        @Html.TextBox("username")
+    <br />
+
+        @Html.Label("How many stars?")
+        @Html.TextBox("rating")
+    <br />
+
+        @Html.Label("Provide a Title")
+        @Html.TextBox("title")
+    <br />
+
+        @Html.Label("Review")
+        @Html.TextArea("message")
+    <br />
+
+    <input type="submit" value="Save" />
+}
+
+
