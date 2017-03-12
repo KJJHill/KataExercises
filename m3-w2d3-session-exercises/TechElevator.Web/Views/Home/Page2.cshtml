@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Page2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Page3", "Home", FormMethod.Get))
+{
+    <h2>
+        @Html.Label("What is your favorite Food? ")
+    </h2>
+            @Html.TextBox("food")
+    <br />
+    
+    <input type="submit" value="Next" />
+}
+

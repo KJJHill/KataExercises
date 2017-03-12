@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Page3";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Summary", "Home", FormMethod.Get))
+{
+    <h2>
+        @Html.Label("What is your favorite Season? ")
+    </h2>
+   
+        <p>Spring: @Html.RadioButton("season", "spring")</p>
+        <p>Summer: @Html.RadioButton("season", "summer")</p> 
+        <p>Fall: @Html.RadioButton("season", "fall")</p>
+        <p>Winter: @Html.RadioButton("season", "winter")</p>
+
+    <br />
+
+    <input type="submit" value="Next" />
+}
+

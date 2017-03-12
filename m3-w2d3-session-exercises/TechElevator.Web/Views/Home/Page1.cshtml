@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Page1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Page2", "Home", FormMethod.Get))
+{
+    <h2>
+        @Html.Label("What is your favorite color? ")
+    </h2>
+        @Html.TextBox("color")
+    <br />
+    <input type="submit" value="Next" />
+}
